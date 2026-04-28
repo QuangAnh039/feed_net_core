@@ -1,0 +1,12 @@
+--- a/src/Makefile      Thu Feb 20 13:12:34 2025
++++ b/src/Makefile      Thu Feb 20 13:12:24 2025
+@@ -25,7 +25,8 @@
+           -Wformat=2 -Wshadow -Wwrite-strings -Wredundant-decls \
+           -Wmissing-declarations -Wno-attributes -Wno-format-nonliteral \
+           -fPIC -g3 $(addprefix -I ,$(INCDIRS)) \
+-          -DSAHTRACES_ENABLED -DSAHTRACES_LEVEL=500
++          -DSAHTRACES_ENABLED -DSAHTRACES_LEVEL=500 \
++          -Wno-error=deprecated-declarations
+
+ ifeq ($(CC_NAME),g++)
+        CFLAGS += -std=c++2a
